@@ -1,0 +1,25 @@
+﻿<h1>Привет Машка тебе с бэка</h1>
+<p>Это первая форма, которую пресылает бэкенд. Потом все изменеия фронтенда делаются Vue.js. Тебе и карты в руки.</p>
+
+<div id="form">
+    <p>
+        <label>Имя</label>
+        <input type="text" placeholder="Введите имя" v-model="FullName" />
+    </p>
+
+    <p>
+        <label>Email</label>
+        <input type="text" placeholder="Введите email" v-model="Email" />
+        <span class="invalid-input" v-show="InvalidEmail">Неверный Email</span>
+    </p>
+
+    <p>
+        <label>Комментарии</label>
+        <textarea rows="10" placeholder="Напишите нам комментарий" v-model="Comments"></textarea>
+    </p>
+
+    <div id="form-buttons">
+        <button type="button" class="danger" v-on:click="ResetForm">Сбросить</button>
+        <button type="button" class="success" ref="SubmitButton" v-bind:disabled="isSubmitDisabled" v-on:click="SubmitForm">Отправить</button>
+    </div>
+</div>
