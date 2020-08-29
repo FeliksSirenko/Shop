@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace Shop.Api.Controllers
 {
+    /// <summary>
+    /// Weather related endpoints.
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
@@ -16,13 +17,20 @@ namespace Shop.Api.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WeatherForecastController"/> class.
+        /// </summary>
+        public WeatherForecastController()
         {
-            _logger = logger;
         }
 
+        /// <summary>
+        /// Gets the list of weather forecasts.
+        /// </summary>
+        /// <returns>List of weather forecasts.</returns>
+        /// <response code="200" cref="WeatherForecast">Ok.</response>
+        /// <response code="400">Bad Request.</response>
+        /// <response code="500">Internal Server Error.</response>
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {

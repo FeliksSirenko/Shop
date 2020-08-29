@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shop.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Shop.Api.Controllers.WeatherForecastController">
+            <summary>
+            Weather related endpoints.
+            </summary>
+        </member>
+        <member name="M:Shop.Api.Controllers.WeatherForecastController.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Shop.Api.Controllers.WeatherForecastController"/> class.
+            </summary>
+        </member>
+        <member name="M:Shop.Api.Controllers.WeatherForecastController.Get">
+            <summary>
+            Gets the list of weather forecasts.
+            </summary>
+            <returns>List of weather forecasts.</returns>
+            <response code="200" cref="T:Shop.Api.WeatherForecast">Ok.</response>
+            <response code="400">BadRequest.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="T:Shop.Api.Program">
+            <summary>
+            Program class.
+            </summary>
+        </member>
+        <member name="M:Shop.Api.Program.Main(System.String[])">
+            <summary>
+            Entry point of the application.
+            </summary>
+            <param name="args">Collection of arguments.</param>
+        </member>
+        <member name="M:Shop.Api.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Builds the host to host an application.
+            </summary>
+            <param name="args">Collection of arguments.</param>
+            <returns>Host to host the application.</returns>
+        </member>
+        <member name="T:Shop.Api.ServiceConfigurations.SwaggerExtension">
+            <summary>
+            Extensions methods to register swagger to a solution.
+            </summary>
+        </member>
+        <member name="M:Shop.Api.ServiceConfigurations.SwaggerExtension.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Registers and configures swagger from appsettings.json configuration file.
+            </summary>
+            <param name="services">Collection of services.</param>
+            <param name="config">Settings to be configured in Swagger.</param>
+        </member>
+        <member name="M:Shop.Api.ServiceConfigurations.SwaggerExtension.UseSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Configures Swagger for usage by the application.
+            </summary>
+            <param name="app">Application builder.</param>
+            <param name="config">Configuration of an application.</param>
+        </member>
+        <member name="T:Shop.Api.Startup">
+            <summary>
+            Startup class that handles pipelines and service configuring.
+            </summary>
+        </member>
+        <member name="M:Shop.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Shop.Api.Startup"/> class.
+            </summary>
+            <param name="configuration">Application configuration.</param>
+        </member>
+        <member name="P:Shop.Api.Startup.Configuration">
+            <summary>
+            Gets Application configuration.
+            </summary>
+        </member>
+        <member name="M:Shop.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">Collection of services.</param>
+        </member>
+        <member name="M:Shop.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">Application builder.</param>
+            <param name="env">Environment in which application is running.</param>
+        </member>
+        <member name="T:Shop.Api.WeatherForecast">
+            <summary>
+            Weather Forecast.
+            </summary>
+        </member>
+        <member name="P:Shop.Api.WeatherForecast.Date">
+            <summary>
+            Gets or sets Date.
+            </summary>
+        </member>
+        <member name="P:Shop.Api.WeatherForecast.TemperatureC">
+            <summary>
+            Gets or sets Temperature Celsius.
+            </summary>
+        </member>
+        <member name="P:Shop.Api.WeatherForecast.TemperatureF">
+            <summary>
+            Gets Temperature Kelvin.
+            </summary>
+        </member>
+        <member name="P:Shop.Api.WeatherForecast.Summary">
+            <summary>
+            Gets or sets Summary.
+            </summary>
+        </member>
+    </members>
+</doc>

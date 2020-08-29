@@ -7,15 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{76FEF72C-A67
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9AA116A8-0C8A-410B-82C4-EE8D24F92F6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Api", "src\Shop.Api\Shop.Api.csproj", "{C0B5C064-FCA4-40E9-93DD-290F28DEA452}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.Api", "src\Shop.Api\Shop.Api.csproj", "{C0B5C064-FCA4-40E9-93DD-290F28DEA452}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Infrastructure", "src\Shop.Infrastructure\Shop.Infrastructure.csproj", "{9E2EF12F-B876-4F39-973F-F90B3961C612}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.Infrastructure", "src\Shop.Infrastructure\Shop.Infrastructure.csproj", "{9E2EF12F-B876-4F39-973F-F90B3961C612}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Persitence", "src\Shop.Persitence\Shop.Persitence.csproj", "{398D2C70-A51D-4A7A-BAE7-4B5A6274086B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.Persitence", "src\Shop.Persitence\Shop.Persitence.csproj", "{398D2C70-A51D-4A7A-BAE7-4B5A6274086B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Application", "src\Shop.Application\Shop.Application.csproj", "{F923ADC1-973F-42E3-9280-BC2035FA461D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.Application", "src\Shop.Application\Shop.Application.csproj", "{F923ADC1-973F-42E3-9280-BC2035FA461D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Tests", "tests\Shop.Tests\Shop.Tests.csproj", "{F62403A5-E774-4C87-9310-E3602E460EDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.Tests", "tests\Shop.Tests\Shop.Tests.csproj", "{F62403A5-E774-4C87-9310-E3602E460EDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BF8D6790-E649-455A-B258-163F9DA27DE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
