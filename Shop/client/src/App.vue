@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <Catalog title="Catalog page"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Catalog from './components/Catalog.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Catalog
   }
 }
 </script>
@@ -21,8 +21,17 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.container {
+  width: 1200px;
+  max-width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
+  margin: 20px 0 40px;
 }
 </style>
