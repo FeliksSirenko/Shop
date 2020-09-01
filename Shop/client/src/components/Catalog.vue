@@ -31,11 +31,18 @@
           </li>
         </ul>
       </div> 
+      <div>{{ info }}</div>
+      <div>{{errorMsg}}</div>
     </main>  
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+Vue.use(VueAxios, axios)
 export default {
   name: 'Catalog',
   props: {
@@ -89,8 +96,19 @@ export default {
         linkToCatalog: "/city/dnepropetrovsk/",
         stateId: 11                                                                         // id Города
       },  
-    }]
-  })
+    }], 
+    info: null,
+    errorMsg: ""
+  }),
+  mounted() {
+    axios
+      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+      .then(response => (this.info = response))
+      .catch(error => {
+        this.errorMsg = error
+        this.info = "Error"
+      });
+  }
 }
 </script>
 
