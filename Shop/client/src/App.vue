@@ -2,16 +2,19 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <Catalog title="Catalog page"/>
+    <Map title="Map page"/>
   </div>
 </template>
 
 <script>
 import Catalog from './components/Catalog.vue'
+import Map from './components/Map.vue'
 
 export default {
   name: 'App',
   components: {
-    Catalog
+    Catalog,
+    Map
   }
 }
 </script>
