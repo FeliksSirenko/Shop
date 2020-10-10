@@ -1,6 +1,6 @@
 <template>
   <div class="map">
-      Map
+    Map  
   </div>
 </template>
 
@@ -8,6 +8,35 @@
 import MarkerClusterer from '@google/markerclusterer';
 import gmapsInit from '../utils/gmaps';
 import Locations from '../utils/location.js'
+
+const mcOptions = {
+  styles: [{
+      height: 53,
+      url: "http://localhost:8080/img/marker.04de65b7.svg",
+      width: 53
+    },
+    {
+      height: 56,
+      url: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m2.png",
+      width: 56
+    },
+    {
+      height: 66,
+      url: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m3.png",
+      width: 66
+    },
+    {
+      height: 78,
+      url: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m4.png",
+      width: 78
+    },
+    {
+      height: 90,
+      url: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m5.png",
+      width: 90
+    }
+  ]
+}
 
 export default {
   name: 'Map',
@@ -37,9 +66,7 @@ export default {
           return marker;
         });
       // eslint-disable-next-line no-new
-      new MarkerClusterer(map, markers, {
-        imagePath: `https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m`,
-      });
+      new MarkerClusterer(map, markers,  mcOptions );
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error(error);

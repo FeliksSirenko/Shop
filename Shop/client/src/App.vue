@@ -1,21 +1,20 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <Catalog title="Catalog page"/>
-    <Map title="Map page"/>
+    <Header title="Header"/> 
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Catalog from './components/Catalog.vue'
-import Map from './components/Map.vue'
+import Header from './components/Header.vue'
 
 export default {
   name: 'App',
   components: {
-    Catalog,
-    Map
-  }
+    Header,
+    // Catalog,
+    // Map
+  },
 }
 </script>
 
